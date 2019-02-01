@@ -5,18 +5,23 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
-//Rutas
+// Rutas
 import { APP_ROUTING } from './app.routes';
 
 
-//Servicios
+// Servicios
+import { HeroesService } from './services/heroes.service';
 
-//Componentes
+
+// Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchComponent } from './components/search/search.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent,
+    SearchComponent,
+    HeroeTarjetaComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     HttpClientModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,5 @@
-<h1 class="animated fadeIn fast">Pruebas</h1>
+<h1 class="animated fadeIn">Pruebas</h1>
 <hr>
 <div class="card-columns animated fadeIn">
-  <div class="card">
-    <img src="assets/img/aquaman.png" class="card-img-top" alt="IMG">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      <button type="button" class="btn btn-outline-primary btn-block">Ver más...</button>
-      
-    </div>
-  </div>
+<app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroe" [idx]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
 </div>
